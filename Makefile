@@ -10,5 +10,9 @@ clean:
 install: pifm
 	cp pifm $(BIN)
 	cp pifmplay $(BIN)
+
 uninstall:
 	rm $(BIN)/pifm $(BIN)/pifmplay
+
+deps:
+	apt-get install ffmpeg sox libsox-fmt-all
