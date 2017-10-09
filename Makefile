@@ -1,7 +1,7 @@
 PREFIX ?= /usr/local
 BIN = $(DESTDIR)$(PREFIX)/bin
-CPPFLAGS=-Wall -fno-strict-aliasing -fpermissive -fwrapv -lm
-
+CPPFLAGS = -Wall -fno-strict-aliasing -fpermissive -fwrapv
+LDFLAGS += -lm
 all: pifm
 
 clean:
