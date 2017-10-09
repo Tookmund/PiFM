@@ -9,6 +9,6 @@ clean:
 
 install: pifm
 	cp pifm $(BIN)
-
+	cp pifmplay $(BIN)
 uninstall:
-	rm $(BIN)/pifm
+	rm $(BIN)/pifm $(BIN)/pifmplay
