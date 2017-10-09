@@ -55,7 +55,7 @@ Open another terminal.
 To control pifmplay from the same terminal, run pifm in the background:
 >sudo sh pifmplay "/path/to/folder" &
 
-(tho you might want to remove the text output)
+(though you might want to remove the text output)
 
 ## How to Use PiFM
 From https://github.com/rm-hull/pifm
@@ -102,7 +102,7 @@ When testing, the signal only started to break up after we went through several 
 
 The python library calls a C program. The C program maps the Peripheral Bus (0x20000000) in physical memory into virtual address space using /dev/mem and mmap. To do this it needs root access, hence the sudo. Next it sets the clock generator module to enabled and sets it to output on GPIO4 (no other accessible pins can be used). It also sets the frequency to ~~100.0Mhz (provided from PLLD@500Mhz, divided by 5)~~ 103.3, which provides a carrier. At this point, radios will stop making a "fuzz" noise, and become silent.
 
-Modulation is done by adjusting the frequency using the fractional divider between 103.325Mhz and 103.275Mhz, which makes the audio signal. ~~The fractional divider doesn't have enough resolution to produce more than ~6 bit audio, but since the PI is very fast, we can do oversampling to provide about 9.5 bit audio by using 128 subsamples per real audio sample.~~ We were being naive with our subsampling algorithm - you can now get full 16 bit quality sound, and it even does FM pre-emphasis so that the result doesn't sound bass-heavy. 
+Modulation is done by adjusting the frequency using the fractional divider between 103.325Mhz and 103.275Mhz, which makes the audio signal. ~~The fractional divider doesn't have enough resolution to produce more than approximately 6 bit audio, but since the PI is very fast, we can do oversampling to provide about 9.5 bit audio by using 128 subsamples per real audio sample.~~ We were being naive with our subsampling algorithm - you can now get full 16 bit quality sound, and it even does FM pre-emphasis so that the result doesn't sound bass-heavy. 
 
 ### Notes
 
