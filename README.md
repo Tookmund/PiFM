@@ -12,7 +12,7 @@ https://github.com/Mikael-Jakhelln/PiFMPlay
 ## How to Use PiFM
 From https://github.com/rm-hull/pifm
 
-Now connect a 20cm or so plain wire to GPIO 4 (which is pin 7 on header P1) to
+Connect a 20cm or so plain wire to GPIO 4 (which is pin 7 on header P1) to
 act as an antenna, and tune an FM radio to 103.3Mhz
 The antenna is optional, but range is reduced from ~100 meters to ~10cm without
 the antenna. The sound file must be 16 bit mono wav format.
@@ -62,4 +62,5 @@ Open another terminal.
 
 To control pifmplay from the same terminal, run pifm in the background:
 >sudo sh pifmplay "/path/to/folder" &
+
 (tho you might want to remove the text output)
