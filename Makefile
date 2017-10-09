@@ -9,3 +9,6 @@ clean:
 
 install: pifm
 	cp pifm $(BIN)
+
+uninstall:
+	rm $(BIN)/pifm
